@@ -1,0 +1,136 @@
+body {
+    margin: 8px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.variant-table {
+    width: 777px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 35px;
+}
+
+.variant-table td {
+    height: 23px;
+    padding: 0 4px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.first-row > td {
+    background-color: #828f8f;
+    color: black;
+}
+
+.second-row > td {
+    background-color: #f5f582;
+    color: black;
+}
+
+.patronymic {
+    background-color: #828f8f !important;
+    vertical-align: bottom !important;
+    padding-bottom: 4px !important;
+}
+
+.variant-cell {
+    background-color: #f5f582 !important;
+}
+
+.first-row:hover:not(:has(.variant-cell:hover))
+> td:not(.variant-cell) {
+    background-color: #f5f582 !important;
+}
+
+.second-row:hover > td {
+    background-color: #828f8f !important;
+}
+
+.variant-table:has(.second-row:hover)
+.variant-cell {
+    background-color: #828f8f !important;
+}
+
+.variant-cell:hover {
+    background-color: #828f8f !important;
+}
+
+.variant-table:has(.variant-cell:hover)
+.second-row > td {
+    background-color: #828f8f !important;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.images-container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.image-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.flag-position {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    background-color: #e60000;
+}
+
+.position-horizontal {
+    position: absolute;
+    width: 74px;
+    height: 28px;
+    left: 33px;
+    top: 56px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.position-vertical {
+    position: absolute;
+    width: 28px;
+    height: 74px;
+    left: 56px;
+    top: 33px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.flag-transform {
+    width: 140px;
+    height: 140px;
+    background-color: #e60000;
+    display: grid;
+    place-items: center;
+}
+
+.transform-line {
+    grid-column: 1;
+    grid-row: 1;
+    width: 74px;
+    height: 28px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.transform-vertical {
+    transform: rotate(90deg);
+}
